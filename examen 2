@@ -1,0 +1,31 @@
+Algoritmo Tienda_martino
+	// Declarar variables
+	Leer ingresecualquierdato
+	// Leer el monto de compra del cliente
+	Escribir 'Ingrese el monto de compra del cliente:'
+	Leer montoCompra
+	// Calcular el descuento según las reglas
+	Si montoCompra<500 Entonces
+	
+	FinSi
+	descuento <- 0
+	Si montoCompra>=500 Y montoCompra<1000 Entonces
+	
+	FinSi
+	descuento <- montoCompra*0.005
+	Si montoCompra>=1000 Y montoCompra<7000 Entonces
+	
+	FinSi
+	descuento <- montoCompra*0.11
+	Si montoCompra>=7000 Y montoCompra<15000 Entonces
+		descuento <- montoCompra*0.18
+	SiNo
+		descuento <- montoCompra*0.25
+	FinSi
+	// Calcular el monto final a pagar
+	montoFinal <- montoCompra-descuento
+	// Mostrar resultados
+	Escribir 'Monto original de compra: ', montoCompra
+	Escribir 'Descuento aplicado: ', descuento
+	Escribir 'Monto final a pagar: ', montoFinal
+FinAlgoritmo
