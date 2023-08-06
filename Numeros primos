@@ -1,0 +1,29 @@
+Algoritmo 		Numero_Primos
+		Definir numero, i, contador como Entero
+		Definir Es_Primo, Booleano Como Caracter 
+		Escribir "Ingrese un número:"
+		Leer numero
+		
+		// Inicializamos el contador a 0, indicando que el número no ha sido divisible por ningún otro número aún.
+		contador <- 0
+		
+		// Verificar si el número es divisible por algún otro número diferente de 1 y él mismo.
+		Para i <- 2 hasta numero / 2 Hacer
+			Si numero MOD i = 0 Entonces
+				// Si el residuo de la división es 0, significa que el número es divisible por i.
+				contador <- contador + 1
+			Fin Si
+		Fin Para
+		
+		// Si el contador es 0, el número es primo, ya que no fue divisible por ningún otro número.
+		Si contador = 0 Entonces
+			esPrimo <- Verdadero
+		Sino
+			esPrimo <- Falso
+		Fin Si
+		
+		// Mostrar el resultado
+		Si esPrimo Entonces Finsi
+			Escribir numero, " es un número primo."
+			Escribir numero, " no es un número primo."
+FinAlgoritmo
