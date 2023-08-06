@@ -1,0 +1,52 @@
+Algoritmo 		Numero_Primos
+		Definir numero, i, contador como Entero
+		Definir Es_Primo, Booleano Como Caracter 
+		Escribir "Ingrese un número:"
+		Leer numero
+		
+		// Inicializamos el contador a 0, indicando que el número no ha sido divisible por ningún otro número aún.
+		contador <- 0
+		
+		// Verificar si el número es divisible por algún otro número diferente de 1 y él mismo.
+		Para i <- 2 hasta numero / 2 Hacer
+			Si numero MOD i = 0 Entonces
+				// Si el residuo de la división es 0, significa que el número es divisible por i.
+				contador <- contador + 1
+			Fin Si
+		Fin Para
+		
+		// Si el contador es 0, el número es primo, ya que no fue divisible por ningún otro número.
+		Si contador = 0 Entonces
+			esPrimo <- Verdadero
+		Sino
+			esPrimo <- Falso
+		Fin Si
+		
+		// Mostrar el resultado
+		Si esPrimo Entonces Finsi
+		Escribir numero, " es un número primo."
+		Escribir numero, " no es un número primo."
+FinAlgoritmo
+
+
+Algoritmo Años_Bisiesto
+    Definir año como Entero
+    Definir Es_Bisiesto Como Caracter
+	Definir Booleano Como Caracter
+    Escribir "Ingrese un año:"
+    Leer año
+    
+    // Un año es bisiesto si es divisible por 4, pero no es divisible por 100, excepto si también es divisible por 400.
+    Si (anio MOD 4 = 0 Y anio MOD 100 <> 0) O anio MOD 400 = 0 Entonces
+        Es_BisiestoBisiesto <- Verdadero
+    Sino
+        Es_BisiestoBisiesto <- Falso
+    Fin Si
+    
+    // Mostrar el resultado
+    Si Es_BisiestoBisiesto Entonces
+        Escribir año, " es un año bisiesto."
+    Sino
+        Escribir año, " no es un año bisiesto."
+    Fin Si
+Fin Algoritmo
